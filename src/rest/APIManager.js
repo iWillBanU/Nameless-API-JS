@@ -50,7 +50,8 @@ class APIManager {
           body += chunk;
         });
         response.on("end", function() {
-          resolve(JSON.parse(body));
+          body = JSON.parse(body);
+          if (body.error == true) reject(new Error(body.message)) else resolve(body);
         });
       });
       request.write(postData);
