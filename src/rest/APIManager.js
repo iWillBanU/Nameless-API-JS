@@ -51,7 +51,7 @@ class APIManager {
         });
         response.on("end", function() {
           body = JSON.parse(body);
-          if (body.error == true) reject(new Error(body.message)) else resolve(body);
+          if (body.error == true) reject(new Error(body.message)); else resolve(body);
         });
       });
       request.write(postData);
