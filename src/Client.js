@@ -8,14 +8,19 @@ const APIManager = require("./rest/APIManager.js");
 class Client {
   /**
    * Creates a new client class
-   * @param {ClientOptions} options The options for the client
+   * @param {String} apiUrl The API url
    */
-  constructor(options = {}) {
+  constructor(apiUrl) {
     /**
-     * The options specified when the client was created
-     * @type {ClientOptions}
+     * The specified API url for the client
+     * @type {String}
      */
-    this.options = options;
+    this.apiUrl = apiUrl;
+
+    /**
+     * The parsed URL object for the API url
+     * @type {URL}
+     */
     this.options.urlInfo = new url.URL(this.options.apiUrl);
 
     /**

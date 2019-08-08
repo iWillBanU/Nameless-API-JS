@@ -24,7 +24,7 @@ class APIManager {
    * @readonly
    */
   get _httpModule() {
-    return (this.client.options.urlInfo.protocol == "https:") ? https : http;
+    return (this.client.urlInfo.protocol == "https:") ? https : http;
   }
 
   /**
@@ -37,7 +37,7 @@ class APIManager {
     postData = JSON.stringify(postData);
     return new Promise(function(resolve, reject) {
       let httpModule = this._httpModule;
-      let request = httpModule.request(apiUrl + "/" + action, {
+      let request = httpModule.request(this.client.apiUrl + "/" + action, {
         method: "POST",
         headers: {
           'content-type': 'application/json',
