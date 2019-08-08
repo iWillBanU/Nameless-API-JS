@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Mattx8y/NodeNamelessMC/issues"
   },
-  "homepage": "https://github.com/Mattx8y/NodeNamelessMC#readme"
+  "homepage": "https://github.com/Mattx8y/NodeNamelessMC#readme",
+  "devDependencies": {
+    "dotenv": "^8.0.0"
+  }
 }
