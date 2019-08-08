@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 let Nameless = require(".");
 let Client = new Nameless.Client(process.env.API_URL);
 
