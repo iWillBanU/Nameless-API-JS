@@ -21,7 +21,7 @@ class Client {
      * The parsed URL object for the API url
      * @type {URL}
      */
-    this.options.urlInfo = new url.URL(this.options.apiUrl);
+    this.options.urlInfo = new url.URL(this.apiUrl);
 
     /**
      * The API Manager for the client
