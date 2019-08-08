@@ -1,0 +1,25 @@
+{
+  "name": "namelessmc",
+  "version": "0.0.1",
+  "description": "Unofficial NamelessMC API library for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mattx8y/NodeNamelessMC.git"
+  },
+  "keywords": [
+    "nameless",
+    "namelessmc",
+    "forum",
+    "api"
+  ],
+  "author": "Mattx8y",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mattx8y/NodeNamelessMC/issues"
+  },
+  "homepage": "https://github.com/Mattx8y/NodeNamelessMC#readme"
+}
