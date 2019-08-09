@@ -9,7 +9,7 @@ function docGen {
   cd ./out
   ls
   cd ..
-  mv ./out/NodeNamelessMC/*/* ./out
+  mv ./out/namelessmc/*/* ./out
 }
 NODE_VERSION=`node --version`
 NODE_VERSION=${NODE_VERSION:1:1}
