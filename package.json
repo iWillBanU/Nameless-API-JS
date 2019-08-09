@@ -4,7 +4,8 @@
   "description": "Unofficial NamelessMC API library for Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "docs": "./node_modules/.bin/jsdoc --configure jsdoc.json"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
   },
   "homepage": "https://github.com/Mattx8y/NodeNamelessMC#readme",
   "devDependencies": {
-    "dotenv": "^8.0.0"
+    "dotenv": "^8.0.0",
+    "minami": "^1.2.3",
+    "jsdoc": "^3.6.3"
   }
 }
