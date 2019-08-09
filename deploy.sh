@@ -6,6 +6,9 @@ TARGET_BRANCH="gh-pages"
 
 function docGen {
   npm run-script docs
+  cd ./out
+  ls
+  cd ..
   mv ./out/NodeNamelessMC/*/* ./out
 }
 NODE_VERSION=`node --version`
