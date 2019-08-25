@@ -1,5 +1,5 @@
 {
-  "name": "namelessmc",
+  "name": "nameless-api-js",
   "version": "0.0.1",
   "description": "Unofficial NamelessMC API library for Node.js",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mattx8y/NodeNamelessMC.git"
+    "url": "git+https://github.com/Mattx8y/Nameless-API-JS.git"
   },
   "keywords": [
     "nameless",
@@ -20,12 +20,10 @@
   "author": "Mattx8y",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Mattx8y/NodeNamelessMC/issues"
+    "url": "https://github.com/Mattx8y/Nameless-API-JS/issues"
   },
-  "homepage": "https://github.com/Mattx8y/NodeNamelessMC#readme",
+  "homepage": "https://github.com/Mattx8y/Nameless-API-JS#readme",
   "devDependencies": {
-    "dotenv": "^8.0.0",
-    "minami": "^1.2.3",
-    "jsdoc": "^3.6.3"
+    "dotenv": "^8.0.0"
   }
 }
