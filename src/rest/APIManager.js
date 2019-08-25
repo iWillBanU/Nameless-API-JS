@@ -1,5 +1,6 @@
 const https = require("https");
 const http = require("http");
+const querystring = require("querystring");
 
 /**
  * API/REST Manager for the library
@@ -34,13 +35,13 @@ class APIManager {
    * @returns {Promise<Object>} The response from the server
    */
   executeAction(action, postData) {
-    postData = JSON.stringify(postData);
+    postData = querystring.stringify(postData);
     return new Promise(function(resolve, reject) {
       let httpModule = this._httpModule;
       let request = httpModule.request(this.client.apiUrl + "/" + action, {
         method: "POST",
         headers: {
-          'content-type': 'application/json',
+          'content-type': 'application/x-www-form-urlencoded',
           'content-length': Buffer.byteLength(postData)
         }
       }, function(response) {
