@@ -20,14 +20,21 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Build JSDoc and commit
+    - name: Build JSDoc and push
       run: |
         npm install
         npm run docs --if-present
+        cd docs
+        git init
+        git remote add origin https://github.com/Mattx8y/Nameless-API-JS.git
         git config user.email "wrscr.surpertop@gmail.com"
         git config user.name "Mattx8y"
-        git add ./docs/
+        git fetch origin gh-docs
+        git add .
         git commit -m "Build JSDoc"
-        git push --force origin master
+        git branch gh-docs
+        header=$(echo -n "ad-m:${GH_TOKEN}" | base64)
+        git -c http.extraheader="AUTHORIZATION: basic $header" push -u -f origin gh-docs
       env:
         CI: true
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
