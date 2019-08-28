@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
-    "docs": "./node_modules/.bin/jsdoc --configure jsdoc.json"
+    "docs": "./node_modules/.bin/jsdoc --configure jsdoc.json --private"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/Mattx8y/Nameless-API-JS#readme",
   "devDependencies": {
     "dotenv": "^8.0.0",
-    "jsdoc": "^3.6.3"
+    "jsdoc": "^3.6.3",
+    "minami": "^1.2.3"
   }
 }
