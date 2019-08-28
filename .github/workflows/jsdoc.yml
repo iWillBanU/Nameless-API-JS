@@ -1,6 +1,9 @@
 name: JSDoc Build and Push
 
-on: [push]
+on:
+  push:
+    branches:
+    - master
 
 jobs:
   build:
@@ -17,7 +20,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Build JSDoc and push to github
+    - name: Build JSDoc
       run: |
         npm install
         npm run docs --if-present
@@ -27,5 +30,5 @@ jobs:
         CI: true
     - uses: ad-m/github-push-action@master
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages
