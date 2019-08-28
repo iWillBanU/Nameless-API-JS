@@ -29,12 +29,12 @@ jobs:
         git remote add origin https://github.com/Mattx8y/Nameless-API-JS.git
         git config user.email "wrscr.surpertop@gmail.com"
         git config user.name "Mattx8y"
-        git fetch origin gh-docs
+        git fetch origin gh-pages
         git add .
         git commit -m "Build JSDoc"
-        git branch gh-docs
+        git branch gh-pages
         header=$(echo -n "ad-m:${GH_TOKEN}" | base64)
-        git -c http.extraheader="AUTHORIZATION: basic $header" push -u -f origin gh-docs
+        git -c http.extraheader="AUTHORIZATION: basic $header" push -u -f origin gh-pages
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
