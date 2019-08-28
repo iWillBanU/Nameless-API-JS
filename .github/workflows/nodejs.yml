@@ -21,6 +21,8 @@ jobs:
       run: |
         npm install
         npm run docs --if-present
+        git config user.email "wrscr.surpertop@gmail.com"
+        git config user.name "Mattx8y"
         git add ./docs/
         git commit -m "JSDoc"
         git push -u origin master
