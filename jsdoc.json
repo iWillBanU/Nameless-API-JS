@@ -1,7 +1,7 @@
 {
   "plugins": ["plugins/markdown"],
   "source": {
-    "include": ["src/*.js"]
+    "include": ["src/"]
   },
   "opts": {
     "destination": "./docs/"
