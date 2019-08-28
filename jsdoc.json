@@ -2,5 +2,8 @@
   "plugins": ["plugins/markdown"],
   "source": {
     "include": ["src/", "src/rest/"]
+  },
+  "opts": {
+    "destination": "./docs/"
   }
 }
