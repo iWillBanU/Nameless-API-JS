@@ -1,9 +1,16 @@
 {
   "plugins": ["plugins/markdown"],
   "source": {
-    "include": ["src/", "src/rest/"]
+    "include": ["src/", "src/rest/", "package.json", "README.md"]
   },
   "opts": {
-    "destination": "./docs/"
+    "destination": "./docs/",
+	"template": "./node_modules/minami"
+  },
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true,
+    "useLongnameInNav": false,
+    "showInheritedInNav": true
   }
 }
