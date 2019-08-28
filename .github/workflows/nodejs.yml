@@ -25,6 +25,6 @@ jobs:
         git config user.name "Mattx8y"
         git add ./docs/
         git commit -m "JSDoc"
-        git push origin master
+        git push -u origin master
       env:
         CI: true
