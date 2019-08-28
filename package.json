@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
-    "docs": "./node_modules/.bin/jsdoc --configure jsdoc.json"
+    "docs": "./node_modules/.bin/jsdoc --configure jsdoc.json --private"
   },
   "repository": {
     "type": "git",
