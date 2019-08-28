@@ -86,7 +86,7 @@ class User {
 	};
 	/**
 	 * Gets the amount of notifications this user has
-	 * @returns {Promise<Object}
+	 * @returns {Promise<Object>}
 	 */
 	getNotifications() {
 		return this.client.getNotifications(this);
