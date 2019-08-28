@@ -25,6 +25,6 @@ jobs:
         git config user.name "Mattx8y"
         git add ./docs/
         git commit -m "JSDoc"
-        git push -u https://github.com/Mattx8y/Nameless-API-JS.git master
+        git push https://github.com/Mattx8y/Nameless-API-JS.git master
       env:
         CI: true
