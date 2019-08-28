@@ -21,10 +21,11 @@ jobs:
       run: |
         npm install
         npm run docs --if-present
-        git config user.email "wrscr.surpertop@gmail.com"
-        git config user.name "Mattx8y"
-        git add ./docs/
-        git commit -m "Build JSDoc"
-        git push -u origin master
+        cd docs
+        git init
       env:
         CI: true
+    - uses: ad-m/github-push-action@master
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages
