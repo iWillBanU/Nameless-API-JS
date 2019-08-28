@@ -21,7 +21,8 @@ jobs:
       run: |
         npm install
         npm run docs --if-present
-        git remote add origin https://github.com/Mattx8y/Nameless-API-JS.git
+        git add ./docs/
+        git commit -m "JSDoc"
         git push -u origin master
       env:
         CI: true
