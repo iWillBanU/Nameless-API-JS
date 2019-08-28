@@ -26,6 +26,8 @@ jobs:
         npm run docs --if-present
         cd docs
         git init
+        git config user.email "wrscr.surpertop@gmail.com"
+        git config user.name "Mattx8y"
         git add .
         git commit -m "Build JSDoc"
       env:
