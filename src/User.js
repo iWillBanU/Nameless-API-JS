@@ -6,12 +6,11 @@ class User {
 	 * Creates a user with information from the REST action
 	 * @param {Object} userInfo REST user information
 	 * @param {Client} client The client that created this instance
-	 * @private
 	 */
 	constructor(userInfo, client) {
 		/**
 		 * The client that created this instance
-	     * @type {Client}
+	         * @type {Client}
 		 * @private
 		 */
 		this.client = client;
