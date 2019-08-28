@@ -26,6 +26,8 @@ jobs:
         npm run docs --if-present
         cd docs
         git init
+        git add .
+        git commit -m "Build JSDoc"
       env:
         CI: true
     - uses: ad-m/github-push-action@master
