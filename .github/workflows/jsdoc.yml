@@ -20,14 +20,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Build JSDoc
+    - name: Build JSDoc and commit
       run: |
         npm install
         npm run docs --if-present
-        git init
         git config user.email "wrscr.surpertop@gmail.com"
         git config user.name "Mattx8y"
-        git remote add origin https://github.com/Mattx8y/Nameless-API-JS.git
         git add ./docs/
         git commit -m "Build JSDoc"
       env:
