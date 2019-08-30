@@ -24,6 +24,15 @@ class Client {
      */
     this.cacheUsers = cacheUsers;
     
+    if (cacheUsers) {
+      /** 
+       * A Map containing the cached users
+       * @type {?Map<Array<String>,User>}
+       * @private
+       */
+      this.cachedUsers = new Map();
+    };
+    
     /**
      * The parsed URL object for the API url
      * @type {URL}
