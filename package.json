@@ -1,11 +1,11 @@
 {
-  "name": "nameless-api-js",
-  "version": "0.0.1",
-  "description": "Unofficial NamelessMC API library for Node.js",
+  "name": "nameless-api-v1",
+  "version": "1.0.0",
+  "description": "Unofficial NamelessMC v1 API library for Node.js",
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
-    "docs": "./node_modules/.bin/jsdoc --configure jsdoc.json --private"
+    "docs": "./node_modules/.bin/jsdoc --configure jsdoc.json"
   },
   "repository": {
     "type": "git",
