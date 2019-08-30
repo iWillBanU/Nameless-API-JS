@@ -9,14 +9,21 @@ class Client {
   /**
    * Creates a new client class
    * @param {String} apiUrl The API url
+   * @param {Boolean?} cacheUsers Whether or not to cache user objects. (improves preformance but may cause inconsistentcies between the library and the website) Defaults to true
    */
-  constructor(apiUrl) {
+  constructor(apiUrl, cacheUsers = true) {
     /**
      * The specified API url for the client
      * @type {String}
      */
     this.apiUrl = apiUrl;
-
+    
+    /**
+     * Whether or not to cache user objects
+     * @type {Boolean}
+     */
+    this.cacheUsers = cacheUsers;
+    
     /**
      * The parsed URL object for the API url
      * @type {URL}
@@ -48,7 +55,14 @@ class Client {
         .catch(reject);
     });
   };
-
+  /**
+   * Fetches a user from the website
+   * @param {String} user Minecraft username/UUID of the user to fetch
+   * @returns {Promise<User>} The user that was fetched
+   */
+  get(user) {
+    
+  };
 };
 
 module.exports = Client;
