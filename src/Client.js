@@ -67,9 +67,10 @@ class Client {
   /**
    * Fetches a user from the website
    * @param {String} user Minecraft username/UUID of the user to fetch
+   * @param {?Boolean} force Force a request to the website/disables getting user from cache
    * @returns {Promise<User>} The user that was fetched
    */
-  get(user) {
+  get(user, force = false) {
     
   };
 };
