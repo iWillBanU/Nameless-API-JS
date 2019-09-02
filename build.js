@@ -16,4 +16,4 @@ var deleteFolderRecursive = function(path) {
   }
 };
 
-deleteFolderRecursive(`./${pkg.name}/${pkg.version}`);
+deleteFolderRecursive(`./docs/${pkg.name}/${pkg.version}`);
