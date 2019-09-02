@@ -32,6 +32,7 @@ jobs:
         git fetch origin gh-pages
         git pull origin gh-pages
         cd ..
+        node build.js
         npm run docs --if-present
         cd docs
         git add .
