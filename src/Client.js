@@ -71,7 +71,7 @@ class Client {
    * @returns {Promise<User>} The user that was fetched
    */
   get(user, force = false) {
-    
+    // TODO: Get User
   };
 };
 
