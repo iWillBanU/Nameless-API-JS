@@ -9,7 +9,7 @@ class Client {
   /**
    * Creates a new client class
    * @param {String} apiUrl The API url
-   * @param {?Boolean} cacheUsers Whether or not to cache user objects. (improves preformance but may cause inconsistentcies between the library and the website) Defaults to true
+   * @param {Boolean?} cacheUsers Whether or not to cache user objects. (improves preformance but may cause inconsistentcies between the library and the website) Defaults to true
    */
   constructor(apiUrl, cacheUsers = true) {
     /**
@@ -27,7 +27,7 @@ class Client {
     if (cacheUsers) {
       /** 
        * A Map containing the cached users
-       * @type {Map<Array<String>,User>?}
+       * @type {?Map<Array<String>,User>}
        * @private
        */
       this.cachedUsers = new Map();
@@ -67,7 +67,7 @@ class Client {
   /**
    * Fetches a user from the website
    * @param {String} user Minecraft username/UUID of the user to fetch
-   * @param {?Boolean} force Force a request to the website/disables getting user from cache
+   * @param {Boolean?} force Force a request to the website/disables getting user from cache
    * @returns {Promise<User>} The user that was fetched
    */
   get(user, force = false) {
