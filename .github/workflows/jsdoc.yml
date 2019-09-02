@@ -36,8 +36,9 @@ jobs:
         cd docs
         git add .
         git commit -m "Build JSDoc"
+        git branch gh-pages
         header=$(echo -n "ad-m:${GH_TOKEN}" | base64)
-        git -c http.extraheader="AUTHORIZATION: basic $header" push -u -f origin gh-pages
+        git -c http.extraheader="AUTHORIZATION: basic $header" push -u origin gh-pages
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
