@@ -71,7 +71,19 @@ class Client {
    * @returns {Promise<User>} The user that was fetched
    */
   get(user, force = false) {
-    // TODO: Get User
+    // TODO: Cache Support
+    let postData = {};
+    if (user.length <= 15) {
+      postData.username = user;
+    } else {
+      postData.uuid = user;
+    };
+    return new Promise(function(resolve, reject) {
+      this.apiManager.executeAction("get", postData)
+        .then(function(response) {
+          resolve(new User(response));
+        }).catch(reject);
+    });
   };
 };
 
