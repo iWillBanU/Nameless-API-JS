@@ -27,8 +27,8 @@ jobs:
         cd docs
         git init
         git remote add origin https://github.com/Mattx8y/Nameless-API-JS.git
-        git config user.email "wrscr.surpertop@gmail.com"
-        git config user.name "Mattx8y"
+        git config user.email "jsdocbot@gmail.com"
+        git config user.name "JSDocBot"
         git fetch origin gh-pages
         git pull origin gh-pages
         cd ..
