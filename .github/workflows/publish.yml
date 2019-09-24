@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - stable
+      - stable-v2
 
 jobs:
 #  build:
