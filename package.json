@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/Mattx8y/Nameless-API-JS#readme",
   "devDependencies": {
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.2.0",
     "jsdoc": "^3.6.3",
     "minami": "^1.2.3"
   }
