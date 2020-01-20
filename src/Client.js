@@ -23,7 +23,6 @@ class Client {
     /**
      * Whether or not to cache user objects
      * @type {Boolean}
-     * @property
      */
     this.cacheUsers = cacheUsers;
     
@@ -32,7 +31,6 @@ class Client {
        * A Map containing the cached users
        * @type {?Map<Array<String>,User>}
        * @private
-       * @property
        */
       this.cachedUsers = new Map();
     };
@@ -40,7 +38,6 @@ class Client {
     /**
      * The parsed URL object for the API url
      * @type {URL}
-     * @property
      */
     this.urlInfo = new url.URL(this.apiUrl);
 
@@ -48,7 +45,6 @@ class Client {
      * The API Manager for the client
      * @type {APIManager}
      * @private
-     * @property
      */
     this.apiManager = new APIManager(this);
 
