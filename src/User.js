@@ -72,7 +72,7 @@ class User {
 	 * @returns {Promise}
 	 */
 	report(reporter, content) {
-		return this.client.createReport(reporter, this);
+		return this.client.createReport(reporter, this, content);
 	};
 	/**
 	 * Creates a report against another user, with the report being created by this user
@@ -81,7 +81,7 @@ class User {
 	 * @returns {Promise}
 	 */
 	createReport(reported, content) {
-		return this.client.createReport(this, reported);
+		return this.client.createReport(this, reported, content);
 	};
 	/**
 	 * Gets the amount of notifications this user has
