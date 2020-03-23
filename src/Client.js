@@ -110,7 +110,7 @@ class Client {
    */
   createReport(reporter, reported, content) {
     let myclient = this;
-    return new Promise(function(resolve, reject) {
+    return new Promise(async function(resolve, reject) {
         reporter = await myclient.get(reporter).catch(reject);
         reported = await myclient.get(reported).catch(reject);
         let postData = {reporter_uuid: reporter.uuid, reported_uuid: reported.uuid, reported_username: reported.username, content: content};
@@ -126,7 +126,7 @@ class Client {
    */
   getNotifications(user) {
     let myclient = this;
-    return new Promise(function(resolve, reject) {
+    return new Promise(async function(resolve, reject) {
         user = await myclient.get(user).catch(reject);
         let postData = {uuid: user.uuid || user.username};
         myclient.apiManager.executeAction("getNotifications", postData).then(function(response) {
